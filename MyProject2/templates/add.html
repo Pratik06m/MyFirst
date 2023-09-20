@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+   
+    <title>My addition page</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table align="center" border="1" width=""300">
+            <caption>Addition Form</caption>
+            <tr align="center">
+                <td>No 1</td>
+                <td> <input type="text" name="no1" value="{{n1}}"></td></tr>
+                <tr align="center">
+                <td>No 2</td>
+                <td> <input type="text" name="no2" value="{{n2}}"></td></tr>
+                <tr align="center">
+                <td>Result</td>
+                <td> <input type="text" name="res" value="{{r1}}"></td></tr>
+                <tr> 
+                    <td><input type="submit" value="Submit"></td>
+                    <td><input type="reset" value="Cancel"></td>
+                </tr>
+            </tr>
+
+        </table>
+    </form>
+    
+</body>
+</html>

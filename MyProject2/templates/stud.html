@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title> My Web page</title>
+    </head>
+    <body>
+        <form action="" method="post" style="background-color: blanchedalmond;">
+            {% csrf_token %}
+        <table style="background-color: aqua;" align="center" width="300" cellspadding="5" cellspacing="5">
+            <caption style="color: brown;background-color: aquamarine; font-size:xx-large  ;">Student Information</caption>
+            <tr>
+                <td>Roll</td>
+                <td><input type="text" name="roll" id=""></td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td><input type="text" name="sname" id=""></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" name="city" id=""></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td><input type="text" name="country" id=""></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+                <td><input type="reset" value="Cancel"></td>
+            </tr>
+        </table>
+    </form>
+    <table align="center" width="600" border="1" cellspacing="5" cellpadding="5">
+        <caption style="font-size: xx-large;">Student Details</caption>
+        <tr align="center">
+            <td>Roll</td>
+            <td>Name</td>
+            <td>City</td>
+            <td>Country</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+        {% for x in data %}
+        <tr align="center">
+            <td>{{x.roll}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.city}}</td>
+            <td>{{x.country}}</td>
+            <td><a href="#">Edit</a></td>
+            <td><a href="#">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    </body>
+</html>
